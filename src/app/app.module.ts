@@ -8,6 +8,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { VideosComponent } from './videos/videos.component';
 import { AnotherComponent } from './another/another.component';
+import { AppRoutingModule } from './app.routing';
+import { provideRoutes } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { AnotherComponent } from './another/another.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+      AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
