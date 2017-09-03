@@ -10,14 +10,29 @@ import { VideosComponent } from './videos/videos.component';
 import { AnotherComponent } from './another/another.component';
 import { AppRoutingModule } from './app.routing';
 import { provideRoutes } from '@angular/router';
+import { SafePipe } from './utilities/safe.pipe';
+import { HomepageComponent } from './homepage/homepage.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpModule } from '@angular/http';
+import { SearchComponent } from './search/search.component';
+import { ResultsComponent } from './results/results.component' 
 @NgModule({
   declarations: [
     AppComponent,
     VideosComponent,
-    AnotherComponent
+    AnotherComponent,
+    SafePipe,
+    HomepageComponent,
+    SearchComponent,
+    ResultsComponent
+  
   ],
   imports: [
+  BsDropdownModule.forRoot(),
+  CarouselModule.forRoot(),
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,

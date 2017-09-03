@@ -1,0 +1,44 @@
+        <div class="container-fluid">
+        <div class='row'>
+            <!-- <div class='col-lg-12'> -->
+            <carousel class='text-center' *ngIf='ImageList'>
+              <slide *ngFor='let imageObj of ImageList'>
+                <a class='' href='/videos/videos-1'>
+                    <img class='img-main-carousel'  [src]="imageObj.image" alt="slide">
+                </a>
+                <div class="carousel-caption">
+                  <h3>{{imageObj.name}}</h3>
+                  
+                  <p>
+                  <a class='btn btn-default'  href='/videos/{{imageObj.slug}}' (click)='preventNormal($event, imageObj)'>
+                  View
+                  </a>
+                  </p>
+
+                 </div>
+
+              </slide>
+              <!-- <slide>
+                 <a class='' href='/videos/video-1'>
+                    <img class='img-main-carousel' src="assets/another.jpg" alt="Second slide">
+                </a>
+                <div class="carousel-caption">
+                  <h3>Imagine dragons</h3>
+                  
+                  <p><a class='btn btn-default' #image2 href='/videos/video-2' (click)='preventNormal($event, image2)'>Believer</a></p>
+                </div>
+              </slide>
+              <slide>
+               <a class='' href='/videos/video-1'>
+                    <img class='img-main-carousel' src="assets/newer.jpg" alt="Third slide">
+                </a>
+                <div class="carousel-caption">
+                  <h3>Imagine</h3>
+                  
+                  <p><a class='btn btn-default' #image3 href='/videos/video-3' (click)='preventNormal($event, image3)'>Thunder</a></p>
+                </div>
+              </slide> -->
+            </carousel>
+        <!-- </div> -->
+    </div>
+    </div>
